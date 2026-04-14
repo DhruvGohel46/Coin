@@ -64,7 +64,7 @@ export const CoinFlip = () => {
                     </div>
 
                     {/* Back - Tails (Liquid Glass Interface) */}
-                    <div className="absolute inset-0 rounded-full liquid-glass backface-hidden transform-[rotateY(180deg)_translateZ(-10px)] overflow-hidden border-2 border-white/90">
+                    <div className="absolute inset-0 rounded-full liquid-glass backface-hidden transform-[rotateY(180deg)_translateZ(10px)] overflow-hidden border-2 border-white/90">
                         <div className="relative flex flex-col items-center justify-center w-full h-full bg-slate-50/30 shadow-[inset_0_0_40px_rgba(255,255,255,1)]">
                             {/* Specular curved lighting overlay */}
                             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80%] h-[30%] bg-linear-to-b from-white to-white/0 rounded-full blur-[2px] opacity-90" />
