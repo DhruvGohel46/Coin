@@ -1,49 +1,24 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Navbar } from '@/components/layout/Navbar';
 import { CoinFlip } from '@/components/coin/CoinFlip';
-import { DialSlider } from '@/components/ui/DialSlider';
 
 export default function Home() {
     return (
-        <main className="h-screen w-full flex flex-col bg-white overflow-hidden relative">
+        <main className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-white">
+            {/* Ambient Fluid Background */}
+            <div className="absolute inset-0 bg-linear-to-br from-[#ffffff] via-[#f0f4f8] to-[#e1e5ee] animate-ambient -z-10" />
+            
+            {/* Subtle Gradient Orbs to create refraction behind the glass */}
+            <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] bg-pink-50/50 rounded-full blur-[100px] -z-10" />
+            <div className="absolute bottom-1/4 right-1/4 w-[50vw] h-[50vw] bg-blue-50/50 rounded-full blur-[120px] -z-10" />
+            
             <Navbar />
 
-            {/* Main Interactive Experience */}
-            <div className="flex-1 flex flex-col items-center justify-center px-8 relative pt-20">
-                {/* Header Text */}
-                <div className="text-center space-y-2 mb-12">
-                    <motion.p 
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-black/40 text-xs font-bold uppercase tracking-[0.4em]"
-                    >
-                        Session Protocol 04
-                    </motion.p>
-                    <div className="text-3xl md:text-5xl font-medium tracking-tight leading-tight text-black">
-                        How Have You Been <br /> 
-                        <span className="font-black italic">Deciding</span> Things?
-                    </div>
-                </div>
-
-                <div className="relative mb-8">
-                    <CoinFlip />
-                </div>
+            {/* Main Interactive Glass Container */}
+            <div className="relative w-full max-w-lg aspect-square sm:aspect-video sm:max-w-4xl liquid-glass-heavy rounded-[3rem] flex flex-col items-center justify-center p-8 mt-16 mx-4">
+                <CoinFlip />
             </div>
-
-            {/* Bottom Controls */}
-            <motion.div 
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="w-full pb-10"
-            >
-                <DialSlider value={78} label="Success Probability Rate" />
-            </motion.div>
-
-            {/* Subtle Gradient Overlay for Depth */}
-            <div className="absolute inset-0 pointer-events-none bg-linear-to-tr from-black/2 via-transparent to-black/3" />
         </main>
     );
 }
