@@ -20,3 +20,4 @@ export const Navbar = () => {
             </div>
         </motion.nav>
     );
+};
