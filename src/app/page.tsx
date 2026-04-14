@@ -19,6 +19,10 @@ export default function Home() {
             <div className="relative w-full max-w-lg aspect-square sm:aspect-video sm:max-w-4xl liquid-glass-heavy rounded-[3rem] flex flex-col items-center justify-center p-8 mt-16 mx-4">
                 <CoinFlip />
             </div>
+
+            <footer className="absolute bottom-6 text-[10px] font-bold text-black/30 uppercase tracking-[0.3em]">
+                Engineered by Dhruv
+            </footer>
         </main>
     );
 }

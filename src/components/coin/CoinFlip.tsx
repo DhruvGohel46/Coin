@@ -19,11 +19,17 @@ export const CoinFlip = () => {
         // Call API
         const response: any = await flipCoin();
         
-        // Random number of full rotations plus target face
-        // Each 180 deg is a face swap
-        const extraRotations = (Math.floor(Math.random() * 5) + 5) * 360; 
-        const targetRotation = response.result === 'heads' ? 0 : 180;
-        const totalRotation = rotation + extraRotations + targetRotation;
+        // Calculate physics rotation based on current state to ensure perfect sync
+        const isCurrentHeads = rotation % 360 === 0;
+        let additionalRotation = (Math.floor(Math.random() * 5) + 5) * 360;
+        
+        if (response.result === 'heads' && !isCurrentHeads) {
+            additionalRotation += 180;
+        } else if (response.result === 'tails' && isCurrentHeads) {
+            additionalRotation += 180;
+        }
+
+        const totalRotation = rotation + additionalRotation;
 
         await controls.start({
             rotateY: totalRotation,
