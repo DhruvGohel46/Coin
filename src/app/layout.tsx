@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   keywords: ["coin flip", "3D UI", "premium design", "random number generator", "Next.js"],
   manifest: "/manifest.json",
   openGraph: {
-    title: "flip a Coin | Decision Making Redefined",
-    description: "Experience the world's first BIOSORA-inspired 3D coin toss engine.",
-    url: "https://flip-a-coin.vercel.app",
-    siteName: "flip a Coin",
-    images: [{ url: "/icon.png" }],
-    locale: "en_US",
-    type: "website",
+  title: "flip a Coin | Decision Making Redefined",
+  description: "Experience the world's first premium 3D coin toss engine.",
+  url: "https://flip-a-coin.vercel.app",
+  siteName: "flip a Coin",
+  images: [{ url: "/icon.png" }],
+  locale: "en_US",
+  type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "flip a Coin",
-    description: "Premium decision making at your fingertips.",
-    images: ["/icon.png"],
+  card: "summary_large_image",
+  title: "flip a Coin",
+  description: "Premium decision making at your fingertips.",
+  images: ["/icon.png"],
   },
 };
 
@@ -40,28 +40,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} dark`}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  if (theme === 'light') {
-                    document.documentElement.classList.remove('dark');
-                  } else {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body className="antialiased min-h-screen">
-        {children}
-      </body>
-    </html>
+  <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <body className="antialiased min-h-screen">
+    {children}
+    </body>
+  </html>
   );
 }

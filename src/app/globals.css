@@ -3,34 +3,17 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
-  /* Primary Colors */
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-surface-light: #f8fafc;
-  --color-surface-dark: #0f172a;
 }
 
 :root {
-  --background: #f4f1ee;
-  --foreground: #2d2a26;
-  --glass-bg: rgba(255, 255, 255, 0.5);
-  --glass-border: rgba(255, 255, 255, 0.8);
-  --glass-blur: 20px;
-  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  --primary: #c9b4a4;
-  --accent: #8e7d71;
-}
-
-.dark {
-  --background: #1c1a19;
-  --foreground: #f4f1ee;
-  --glass-bg: rgba(45, 42, 38, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-blur: 30px;
-  --card-shadow: 0 10px 60px rgba(0, 0, 0, 0.3);
-  --primary: #a78b7a;
-  --accent: #dcd3cc;
+  --background: #ffffff;
+  --foreground: #111111;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(200, 200, 200, 0.3);
+  --glass-blur: 24px;
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+  --primary: #000000;
+  --accent: #888888;
 }
 
 body {
@@ -50,7 +33,7 @@ body {
 }
 
 .liquid-shadow {
-  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3));
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
 }
 
 .three-d-layer {
