@@ -16,6 +16,22 @@ export const metadata: Metadata = {
   title: "flip a Coin | Provably Fair Decision Engine",
   description: "Experience high-fidelity physics and 3D layering with the world's most premium coin flip protocol. Built for state-of-the-art decision making.",
   keywords: ["coin flip", "3D UI", "premium design", "random number generator", "Next.js"],
+  manifest: "/manifest.json",
+  openGraph: {
+    title: "flip a Coin | Decision Making Redefined",
+    description: "Experience the world's first BIOSORA-inspired 3D coin toss engine.",
+    url: "https://flip-a-coin.vercel.app",
+    siteName: "flip a Coin",
+    images: [{ url: "/icon.png" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "flip a Coin",
+    description: "Premium decision making at your fingertips.",
+    images: ["/icon.png"],
+  },
 };
 
 export default function RootLayout({

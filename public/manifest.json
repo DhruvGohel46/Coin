@@ -1,0 +1,16 @@
+{
+  "name": "flip a Coin",
+  "short_name": "FlipCoin",
+  "description": "Experience the world's most premium 3D decision-making engine.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f1ee",
+  "theme_color": "#1c1a19",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
